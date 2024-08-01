@@ -1,0 +1,287 @@
+body {
+    font-family: "Handjet", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1eff00;
+    font-size: 20px;
+    background-color: #1eff00; 
+    background: url(img3.gif) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    cursor: none;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    filter: blur(1px); 
+    z-index: -1; 
+}
+
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    background-color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.container1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 2em;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: rgb(10, 247, 10);
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+#contact{ 
+    color: #4cec0c;
+    background-color: rgba(26, 31, 97, 0.877);
+    padding: 1em;
+    margin: 1em 0;
+    box-shadow: 0 2px 4px rgba(10, 7, 224, 0.993);
+
+}
+footer {
+    background-color: #090914da;
+    color: white;
+    text-align: center;
+    padding:1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin-bottom: 1em;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: #1eff00;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+footer.visible {
+    transform: translateY(0);
+}
+
+footer.hidden {
+    transform: translateY(100%);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 0.7em;
+    border: none;
+    background-color: #b82308;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #5eaf12;
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 160px, rgba(129, 19, 255, 0.85) 200px);
+    pointer-events: none;
+    transition: background 0.2s ease;
+    
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Handjet", sans-serif;
+    font-size: calc(20px + 2vw);
+    font-weight: 700;
+    color: #fafafa;
+    text-shadow: 7px 10px 4px #4cec0c;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgb(15, 5, 168);
+    border-radius: 50%;
+    pointer-events: none;
+}
